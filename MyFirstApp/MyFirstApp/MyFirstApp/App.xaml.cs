@@ -11,12 +11,16 @@ namespace MyFirstApp
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
+            NavigationService.NavigateAsync("ChatPage");
         }
 
         protected override void RegisterTypes()
         {
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<MainMenuPage>();
+            Container.RegisterTypeForNavigation<MapPage>();
+            Container.RegisterTypeForNavigation<ChatPage>();
+
         }
     }
 }
